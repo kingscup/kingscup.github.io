@@ -1,0 +1,426 @@
+body {
+  background: hsl(120, 79%, 32%);
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  width: auto;
+  overflow-x:hidden;
+}
+
+.container-general {
+  width: 90%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  background:hsl(35, 77%, 85%);
+  border:3px outset rgba(0,0,0,0.3);
+  border-radius:10px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);  
+}
+
+.header {
+  padding:0;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.button h2 {
+  padding:0;
+  margin:0;
+}
+
+.button {
+  font-size: 1.25rem;
+  background: rgba(250,0,0,0.8);
+  border-radius: 10px;
+  border: rgba(0,0,0,0.3) 2px outset;
+  width:80%;
+  font-family: 'Chonburi';
+  padding:0.5rem 0;
+}
+
+h2, h3 {
+  font-weight:normal;
+}
+
+h3 {
+  text-decoration:underline;
+  font-size:1rem;
+}
+
+.hidden {
+  display:none;
+}
+
+.remove-touch {
+  z-index:1;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.window-container {
+  z-index:2;
+  padding:0;
+  left:4%;
+  right:4%;
+  top:2.5%;
+  height:95%;
+  max-height:95%;
+  overflow-x: auto;
+  background:hsl(0, 0%, 95%);
+  position: absolute;
+  border:2px outset rgba(0,0,0,0.3);
+  -webkit-box-shadow: 1px 1px 5px;
+          box-shadow: 1px 1px 5px;
+  border-radius: 5px;
+}
+
+.about-screen-container {
+  padding:1.5rem;
+  padding-top: 0;
+}
+
+.about-screen-container p:first-of-type {
+  padding-bottom: 2rem;
+}
+
+.about-screen-container p:last-of-type {
+  padding-top:2rem;
+}
+
+#choose-rule-screen {
+  padding-top: 2rem;  
+}
+
+.exit {
+  position: absolute;
+  width:20px;
+  height:20px;
+  right:0px;
+  top:0px;
+  padding:5px;
+  font-size: 14px;
+  background:#fd281b;
+  border-radius: 2px;
+  border:1px outset rgba(0,0,0,0.3);
+}
+
+#rules-cta {
+  font-style: italic;
+  display: block;
+  height:2rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  width:80%;
+  font-size:1.25rem;
+}
+
+.ruleBox:first-of-type {
+  border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+.ruleBox, .ruleBox input {
+  font-size: 1rem;
+}
+
+.ruleBox {
+  border-bottom:1px solid rgba(0,0,0,0.3);
+  width:100%;
+  margin:0 auto;
+  padding:.75rem 0;
+}
+
+input[type=text] {
+  padding-left:.25rem;
+  width:80%;
+  border-radius:4px;
+  font-family: Arial;
+
+}
+
+.ruleValue {
+  text-align: left;
+  letter-spacing: -1px;
+  position: absolute;
+  left:.5rem;
+  display:inline-block;
+  width:6%;
+  height:1.25rem;
+  padding:3px 0;
+}
+
+#val10 {
+  left:1.5%;
+}
+
+#game-stats span:first-child, 
+#game-stats span:last-child {
+  width:50%;
+  
+  position:absolute;
+}
+
+#game-stats span:first-child {
+  left:0;
+  border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+#game-stats span:last-child {
+  border-left: 1px solid rgba(0,0,0,0.3);
+  right:0;
+}
+
+#game-stats {
+  padding-top: .25rem;
+  position:absolute;
+  top:0;
+  left:5%;
+  right:5%;
+  font-size: 1.5rem;
+  height: 2rem;
+  background: hsl(35, 79%, 85%);
+  border-radius:0 0 10px 10px;
+  border:2px outset rgba(0,0,0,0.3);
+  border-top: 0;
+}
+
+.window-container .button {
+  margin: 0 auto;
+  margin-top:10px;
+  margin-bottom: 0.5rem;
+}
+
+#game-container {
+  position:absolute;
+  width:100%;
+  top:0;
+  bottom:0;
+}
+
+#game-help {
+  position: absolute;
+  bottom:0;
+  left:5%;
+  right:5%;
+  height:2rem;
+  font-size: 1.5rem;
+  border-radius:10px 10px 0 0;
+  background: hsl(250, 77%, 85%);
+  border:2px solid rgba(0,0,0,0.3);
+  border-bottom: 0;
+}
+
+#game-help span {
+  width:32%;
+  height:2rem;
+  display: inline-block;
+  
+}
+
+#notes-btn {
+  border-right: 2px solid rgba(0,0,0,0.3);
+  float:left;
+}
+
+#about-btn {
+  border-left: 2px solid rgba(0,0,0,0.3);
+  float:right;
+}
+
+.window-title {
+  position:relative;
+  display:inline-block;
+  font-size: 2rem;
+  margin-top:.25rem;
+}
+
+#stuff-screen textarea {
+  font-family: Arial;
+  font-size:1.25rem;
+  display:block;
+  position:absolute;
+  margin:0 auto;
+  left:4%;
+  right:4%;
+  width:90%;
+  top:7.5%;
+  min-height:88.5%;
+  resize:none;
+}
+
+.final-rule-container {
+  border-bottom:1px solid black;
+  width:95%;
+  margin:0 auto;
+}
+
+#final-rule-screen .final-rule-container:first-of-type {
+  border-top: 1px solid black;
+}
+
+#final-value-10 {
+  left:1%;
+}
+
+#final-rule-screen {
+  font-size: 1.25rem;
+}
+
+.final-rule {
+  text-align:left; 
+  display:inline-block;
+  width:80%;
+  padding:3px 0;
+}
+
+#final-rule-screen .window-title {
+  margin-bottom:2rem;
+}
+
+#game-over {
+  z-index:3;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#game-over-content {
+  padding:2rem 0;
+  font-size: 1.25rem;
+}
+
+#game-over .button {
+  margin-top:2rem;
+}
+
+#card {
+  overflow: hidden;
+  position: absolute;
+  margin: 0 auto;
+  height:28rem;
+  width:20rem;
+  border: #888 1px solid;
+  border-radius: 0.25rem;
+  background: hsl(0, 0%, 96%);
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.black {
+  color:black;
+}
+
+.red {
+  color:red;
+}
+
+.card-body {
+  width:12rem;
+  height:20rem;
+  margin:0 auto;
+  top: 3.75rem;
+  position: relative;
+  border:#000 .25rem solid;
+}
+
+.card-suit, .card-num {
+  display:block;
+  letter-spacing: -10px;
+}
+
+.card-tl, .card-br {
+  font-size:56px;
+  width:40px;
+  padding: 4px;
+}
+
+.card-tl {
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.card-l, .card-r {
+  top:45%;
+  font-size: 24px;
+  position: absolute;
+  height:10%;
+  width:200px;
+  color:black;
+}
+
+.card-l {
+  right:41%;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+
+}
+
+.card-r {
+  left:41%;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.card-br {
+  position:absolute;
+  bottom:0;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.l-font .card-l, .l-font .card-r {
+  font-size: 32px;
+}
+
+.l-font .card-l {
+  right:37.5%;
+}
+
+.l-font .card-r {
+  left:37.5%;
+}
+
+.xl-font .card-l, .xl-font .card-r {
+  font-size:40px;
+}
+
+.xl-font .card-l {
+  right:35%;
+}
+
+.xl-font .card-r {
+  left:35%;
+}
+
+#card-touch {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+
+#card-touch img {
+  position: absolute;
+  left:2.5%;
+  width:95%;
+  top:2.5%;
+}
