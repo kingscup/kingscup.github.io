@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>index</title>
+    <link href='style.css' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/css?family=Chonburi" rel="stylesheet">
+  </head>
+  <body id="root">
+
+    <div id="container-start" class="container-general" >
+      <h1 class="header">King's Cup</h1>
+      <button class='button' onclick="Scene.chooseRuleScreen()">
+        <h2>PLAY</h2>
+      </button>
+      <h3><span onclick="Scene.aboutScreen()">About</span></h3>
+    </div>
+
+    <div class="remove-touch hidden" id="about-screen">
+      <div class="window-container">
+        <span class="exit" onclick="Scene.exitAboutScreen()">
+          &times;
+        </span>
+        <div class="about-screen-container">
+          <span class="window-title">About</span>
+          <p>King's Cup is a drinking card game that's a surefire way to get the party going. The game starts off with an empty
+            cup in the middle and everybody holding a drink. Each person takes a turn grabbing a card and each card has its own rule. The traditional rules are as follows:</p>
+          <p><b>Ace is waterfall</b>: everybody chugs. The cardholder can stop whenever they want, then the person to their left can stop, then the person to their left, etc...</p>
+          <p><b>2 is you</b>: cardholder decides who drinks.</p>
+          <p><b>3 is me</b>: cardholder drinks.</p>
+          <p><b>4 is whores</b>: not the best phrase to use but women drink.</p>
+          <p><b>5 is thumbmaster</b>: the cardholder can decide to put his thumb on the table at any time and everyone else must follow. 
+            Last person to do so drinks. This rule is live until the thumb master uses their turn or another 5 card is drawn.</p>
+          <p><b>6 is dicks</b>: again not the best phrase but men drink.</p>
+          <p><b>7 is heaven</b>: the last person to point to the sky drinks.</p>
+          <p><b>8 is mate</b>: cardholder decides who drinks with them.</p>
+          <p><b>9 is rhyme</b>: cardholder picks a word and everybody must rhyme. First person to make a mistake or pause drinks.</p>
+          <p><b>10 is categories</b>: cardholder picks a category and everybody must name something within that category such as car brands, music genres, etc... 
+            First person to make a mistake or pause drinks.</p>
+          <p><b>Jack is never have I ever</b>: everybody puts up 3 to 5 fingers. Each person takes turns naming something they haven't done and whoever has done that drinks. 
+            This goes on until somebody has all their fingers down.</p>
+          <p><b>Queen is questions</b>: everybody goes in rotation asking questions. First person to say a statement or pause drinks.</p>
+          <p><b>King is pour</b>: cardholder gets to pour whichever drink they'd like into the cup. Cardholder can also decide to make a rule everybody must follow. 
+            Fourth person to grab a king must drink the contents.</p>
+          <p>Of course, the fun behind King's Cup is to make the rules whatever your heart desires. Drink responsibility and keep on rocking! \m/ - Berto Moore</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="remove-touch hidden" id="choose-rule-screen">
+        <div class="window-container">
+            <span class="exit" onclick="Scene.exitChooseRuleScreen()">
+            &times;
+            </span>
+            <form id="rules">
+                    <span id="rules-cta">Play with traditional rules or create your own.</span>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="valA">A</span>
+                    <input id="ruleA" class="ruleForm" name="A" type="text" value="Waterfall" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val2">2</span>
+                    <input id="rule2" class="ruleForm" name="2" type="text" value="You" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val3">3</span>
+                    <input id="rule3" class="ruleForm" name="3" type="text" value="Me" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val4">4</span>
+                    <input id="rule4" class="ruleForm" name="4" type="text" value="Whores" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val5">5</span>
+                    <input id="rule5" class="ruleForm" name="5" type="text" value="Jive" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val6">6</span>
+                    <input id="rule6" class="ruleForm" name="6" type="text" value="Dicks" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val7">7</span>
+                    <input id="rule7" class="ruleForm" name="7" type="text" value="Heaven" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val8">8</span>
+                    <input id="rule8" class="ruleForm" name="8" type="text" value="Mate" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val9">9</span>
+                    <input id="rule9" class="ruleForm" name="9" type="text" value="Rhyme" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="val10">10</span>
+                    <input id="rule10" class="ruleForm" name="10" type="text" value="Categories" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="valJ">J</span>
+                    <input id="ruleJ" class="ruleForm" name="J" type="text" value="Never Have I Ever" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="valQ">Q</span>
+                    <input id="ruleQ" class="ruleForm" name="Q" type="text" value="Questions" />
+                  </div>
+            <div class="ruleBox">
+                    <span class="ruleValue" id="valK">K</span>
+                    <input id="ruleK" class="ruleForm" name="K" type="text" value="Pour" />
+                  </div>
+                    <button type="button" class='button' onclick="Scene.playGame()">
+                        Start Game
+                    </button>
+                  </form>
+        </div>
+    </div>
+    
+    <div id="game-container" class="hidden">
+      <div id="game-stats">
+        <span class="stat-title">Cards: <span id="card-count">52</span></span>
+        <span class="stat-title">Kings: <span id="king-count">4</span></span>
+        </div>
+
+          <div class=${color} id="card">
+            <div class="card-tl">        
+              <div class="card-num">K</div>
+              <div class="card-suit">$</div>
+            </div>
+              <div class="card-body">       
+                <div class="card-l">Pour</div>
+                <div class="card-r">Pour</div>
+              </div>
+            <div class="card-br">        
+                <div class="card-num">K</div>
+                <div class="card-suit">$</div>
+            </div>
+            <div id="card-touch" ondblclick="d.drawCard()">
+                <img id="card-background" src="./seahorse.jpg" />
+            </div>
+          </div>
+
+        <div id="game-help">
+          <span id="notes-btn" onclick="Scene.stuffScreen()">Stuff</span>
+          <span id="final-rules-btn" onclick="Scene.finalRuleScreen()">Rules</span>
+          <span id="about-btn" onclick="Scene.aboutScreen()">About</span>
+        </div>
+    </div>
+
+    <div class="remove-touch hidden" id="stuff-screen">
+      <div class="window-container">
+        <span class="exit" onclick="Scene.exitStuffScreen()">
+          &times;
+        </span>
+        <div>
+          <span class="window-title">Stuff</span>
+          <textarea class="stuff-form" placeholder="King's rules, last player before break, etc...">
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="final-rule-screen" class="remove-touch hidden">
+        <div class="window-container">
+            <span class="exit" onclick="Scene.exitFinalRuleScreen()">
+                &times;
+            </span>
+                <span class="window-title">Rules</span>
+            
+                <div class="final-rule-container">
+                  <span id="final-value-A" class="ruleValue">A</span>
+                  <span class="final-rule" id="final-A">
+                    Waterfall
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-2" class="ruleValue">2</span>
+                  <span class="final-rule" id="final-2">
+                    You
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-3" class="ruleValue">3</span>
+                  <span class="final-rule" id="final-3">
+                    Me
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-4" class="ruleValue">4</span>
+                  <span class="final-rule" id="final-4">
+                    Whores
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-5" class="ruleValue">5</span>
+                  <span class="final-rule" id="final-5">
+                    Jive
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-6" class="ruleValue">6</span>
+                  <span class="final-rule" id="final-6">
+                    Dicks
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-7" class="ruleValue">7</span>
+                  <span class="final-rule" id="final-7">
+                    Heaven
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-8" class="ruleValue">8</span>
+                  <span class="final-rule" id="final-8">
+                    Mate
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-9" class="ruleValue">9</span>
+                  <span class="final-rule" id="final-9">
+                    Rhyme
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-10" class="ruleValue">10</span>
+                  <span class="final-rule" id="final-10">
+                    Categories
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-J" class="ruleValue">J</span>
+                  <span class="final-rule" id="final-J">
+                    Never Have I Ever
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-Q" class="ruleValue">Q</span>
+                  <span class="final-rule" id="final-Q">
+                    Questions
+                  </span>
+                </div>
+                
+                <div class="final-rule-container">
+                  <span id="final-value-K" class="ruleValue">K</span>
+                  <span class="final-rule" id="final-K">
+                    Pour
+                  </span>
+                </div>
+        </div>          
+    </div>
+
+    <div id="game-over" class="hidden">
+      <span id="game-over-content" class="container-general">
+        Last king has been drawn!
+        <button class='button' onclick="Scene.newGame()">
+          Play Again
+        </button>        
+      </span>
+    </div>
+
+    <script src='index.js'></script>
+  </body>
+</html>
